@@ -124,13 +124,25 @@ public class MovieResourceTest {
 
     @Test
     public void testGetAll() {
-        //TODO
+        given().
+                get("/movie/all")
+                .then()
+                .assertThat()
+                .statusCode( HttpStatus.OK_200.getStatusCode() )
+                .body("id" , hasSize(3));
+                
     }
 
     
     @Test
     public void testFindByTitle() {
-        //TODO
+        System.out.println("testing find by title");
+        given().
+                get("/movie/title/Harry Potter and the Philosopher's Stone")
+                .then()
+                .assertThat()
+                .statusCode( HttpStatus.OK_200.getStatusCode() )
+                .body( "title" , hasItem( "Harry Potter and the Philosopher's Stone" ) );
     }
     
     @Test
@@ -138,10 +150,16 @@ public class MovieResourceTest {
        //TODO, if you have time
     }
     
-     @Test
+    @Test
     public void testFindById() {
         //given().get("/movie/{id}", m2.getId())
         //TODO
+        given().
+                get( "/movie/id/" + m3.getId() )
+                .then()
+                .assertThat()
+                .statusCode( HttpStatus.OK_200.getStatusCode() )
+                .body( "title" , equalTo( m3.getTitle() ) );
           
     }
 }

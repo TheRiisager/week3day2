@@ -50,21 +50,21 @@ public class MovieResource {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public String getAll() {
-        throw new UnsupportedOperationException();
+        return GSON.toJson( FACADE.getAllMovies() );
     }
 
-    @Path("/{id}")
+    @Path("/id/{id}")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public String getById(@PathParam("id") int id) {
-        throw new UnsupportedOperationException();
+        return GSON.toJson( FACADE.getMovieById( id ) );
     }
 
     @Path("title/{title}")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public Response getByTitle(@PathParam("title") String title) {
-        throw new UnsupportedOperationException();
+    public String getByTitle(@PathParam("title") String title) {
+        return GSON.toJson( FACADE.getMoviesByTitle( title ) );
     }
     
 
@@ -75,7 +75,7 @@ public class MovieResource {
     }
     
     @PUT
-    @Path("/{id}")
+    @Path("/update/{id}")
     @Consumes({MediaType.APPLICATION_JSON})
     public void update(MovieDTO entity, @PathParam("id") int id) {
         throw new UnsupportedOperationException();
