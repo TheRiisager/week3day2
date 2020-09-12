@@ -1,4 +1,4 @@
-let urlTemplate = "http://localhost:8080/jpareststarter/api/movie/title/";
+let urlTemplate = "http://localhost:8080/week3day2/api/movie/title/";
 
 let getMovies = function(event){
     event.preventDefault();
