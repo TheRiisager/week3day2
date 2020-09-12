@@ -1,16 +1,6 @@
 [![Build Status](https://travis-ci.org/TheRiisager/week3day2.svg?branch=master)](https://travis-ci.org/TheRiisager/week3day2)
 
-*This project is meant as start code for projects and exercises given in Flow-1+2 at http://cphbusiness.dk in the Study Program "AP degree in Computer Science"*
-
-*Projects which are expected to use this start-code are projects that require all, or most of the following technologies:*
- - *JPA and REST*
-- *Testing, including database test*
-- *Testing, including tests of REST-API's*
-- *CI and CONTINUOUS DELIVERY*
-
-### Preconditions
-*In order to use this code, you should have a local developer setup + a "matching" droplet on Digital Ocean as described in the 3. semester guidelines* 
-# Getting Started
-
-This document explains how to use this code (build, test and deploy), locally with maven, and remotely with maven controlled by Travis
- - [How to use](https://docs.google.com/document/d/1K6s6Tt65bzB8bCSE_NUE8alJrLRNTKCwax3GEm4OjOE/edit?usp=sharing)
+This project (week3day2) contains the bulk of this weeks exercises, linked below. <br>
+The exercises for day 3, done with node.js without a html page, can be found in a seperate folder on github (JSday3). <br>
+The first three HTML/JS exercises are done, but not the last two.<br>
+The very last, optional, exercise is completed under "JS frontend for movie", but is missing data due to issues with getting test data onto my droplet.
